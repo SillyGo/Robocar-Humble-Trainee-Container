@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir -p "$(pwd)/ros2_workspace"
+docker rm ros2-humble-container #necessário, por algum motivo o docker n remove o miseravel
 
 docker run -it \
     --name ros2-humble-container2 \
@@ -12,3 +13,5 @@ docker run -it \
     --device /dev/video0 \
     --group-add video \
     ros2-humble-x11-cam
+
+#este comentário é um easter-egg
