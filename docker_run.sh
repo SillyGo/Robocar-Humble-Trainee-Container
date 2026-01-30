@@ -6,7 +6,7 @@ docker rm ros2-humble-container #necessário, por algum motivo o docker n remove
 xhost +local:docker
 
 docker run -it \
-    --name ros2-humble-container2 \
+    --name ros2-humble-container \
     --net=host \
     --env DISPLAY=$DISPLAY \
     --env QT_X11_NO_MITSHM=1 \
