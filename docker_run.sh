@@ -3,6 +3,8 @@
 mkdir -p "$(pwd)/ros2_workspace"
 docker rm ros2-humble-container #necessário, por algum motivo o docker n remove o miseravel
 
+xhost +local:docker
+
 docker run -it \
     --name ros2-humble-container2 \
     --net=host \
